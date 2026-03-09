@@ -1,9 +1,0 @@
-name = "marketrategold"
-compatibility_date = "2024-01-01"
-
-[site]
-bucket = "./dist"
-
-# Environment variables (add your values in Cloudflare dashboard)
-# [env.production.vars]
-# GOLD_API_KEY = "your-api-key-here"
