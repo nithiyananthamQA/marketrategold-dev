@@ -34,12 +34,12 @@ const branches = [
 ];
 ---
 
-<section id="branches" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-900 via-red-950 to-black">
+<section id="branches" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-900 via-[#2D031A] to-black">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Section Header -->
     <div class="text-center mb-12 sm:mb-16">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-        Our <span class="text-red-400">Branch Locations</span>
+        Our <span class="text-[#C65B91]">Branch Locations</span>
       </h2>
       <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
         Visit any of our branches for instant gold evaluation and payment
@@ -50,7 +50,7 @@ const branches = [
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
       {branches.map((branch, index) => (
         <div 
-          class="branch-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:bg-white/15 hover:border-red-400/50 transition-all duration-300 shadow-lg hover:shadow-2xl"
+          class="branch-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:bg-white/15 hover:border-[#C65B91]/50 transition-all duration-300 shadow-lg hover:shadow-2xl"
           data-index={index}
         >
           <!-- Icon -->
@@ -62,26 +62,26 @@ const branches = [
           <!-- Address -->
           <div class="space-y-3 sm:space-y-4 text-gray-300">
             <div class="flex items-start space-x-3">
-              <svg class="w-5 h-5 text-red-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[#C65B91] mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
               </svg>
               <div>
                 <p class="text-sm leading-relaxed">{branch.address}</p>
-                <p class="text-sm font-semibold text-red-400 mt-1">{branch.city}, {branch.pincode}</p>
+                <p class="text-sm font-semibold text-[#C65B91] mt-1">{branch.city}, {branch.pincode}</p>
               </div>
             </div>
             
             <!-- Phone -->
             <div class="flex items-center space-x-3">
-              <svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[#C65B91] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
               </svg>
-              <a href={`tel:${branch.phone}`} class="text-sm hover:text-red-400 transition-colors">{branch.phone}</a>
+              <a href={`tel:${branch.phone}`} class="text-sm hover:text-[#C65B91] transition-colors">{branch.phone}</a>
             </div>
             
             <!-- Timing -->
             <div class="flex items-center space-x-3">
-              <svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[#C65B91] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
               </svg>
               <p class="text-sm">{branch.timing}</p>
@@ -94,7 +94,7 @@ const branches = [
               href={branch.mapLink}
               target="_blank"
               rel="noopener noreferrer"
-              class="block w-full bg-red-600 hover:bg-red-700 text-white text-center px-4 py-3 rounded-lg font-semibold text-sm transition-colors duration-200"
+              class="block w-full bg-[#7C0849] hover:bg-[#650738] text-white text-center px-4 py-3 rounded-lg font-semibold text-sm transition-colors duration-200"
             >
               Get Directions
             </a>

@@ -38,7 +38,7 @@ const reasons = [
     <!-- Section Header -->
     <div class="text-center mb-16">
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-        Why Choose <span class="text-red-600">MRG Gold Buyers?</span>
+        Why Choose <span class="text-[#7C0849]">MRG Gold Buyers?</span>
       </h2>
       <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
         Experience the difference with Coimbatore's most trusted gold buyers
@@ -49,15 +49,15 @@ const reasons = [
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
       {reasons.map((reason, index) => (
         <div 
-          class="reason-card group relative bg-gradient-to-br from-white to-red-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-red-100"
+          class="reason-card group relative bg-gradient-to-br from-white to-[#F8E8F1] rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-[#F1D1E2]"
           data-index={index}
         >
-          <div class="text-red-600 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300" set:html={reason.icon}></div>
+          <div class="text-[#7C0849] mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300" set:html={reason.icon}></div>
           <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{reason.title}</h3>
           <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{reason.description}</p>
           
           <!-- Decorative element -->
-          <div class="absolute top-0 right-0 w-20 h-20 bg-red-200 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-2xl"></div>
+          <div class="absolute top-0 right-0 w-20 h-20 bg-[#E3A3C5] rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-2xl"></div>
         </div>
       ))}
     </div>
@@ -65,19 +65,19 @@ const reasons = [
     <!-- Trust Indicators -->
     <div class="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
       <div class="stat-card">
-        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">10+</div>
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#7C0849] mb-2">10+</div>
         <div class="text-sm sm:text-base text-gray-600 font-medium">Years Experience</div>
       </div>
       <div class="stat-card">
-        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">5000+</div>
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#7C0849] mb-2">5000+</div>
         <div class="text-sm sm:text-base text-gray-600 font-medium">Happy Customers</div>
       </div>
       <div class="stat-card">
-        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">₹50Cr+</div>
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#7C0849] mb-2">₹50Cr+</div>
         <div class="text-sm sm:text-base text-gray-600 font-medium">Gold Bought</div>
       </div>
       <div class="stat-card">
-        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">100%</div>
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#7C0849] mb-2">100%</div>
         <div class="text-sm sm:text-base text-gray-600 font-medium">Satisfaction Rate</div>
       </div>
     </div>
