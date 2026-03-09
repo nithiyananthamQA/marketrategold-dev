@@ -1,8 +1,5 @@
 # Redirects for Cloudflare Pages
 # https://developers.cloudflare.com/pages/platform/redirects
 
-# Redirect trailing slashes
-/*/ /:splat 301
-
 # WWW redirect (optional - uncomment if needed)
 # https://www.marketrategold.com/* https://marketrategold.com/:splat 301
