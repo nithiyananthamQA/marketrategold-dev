@@ -313,8 +313,8 @@
   if (typeof window !== 'undefined') {
     fetchGoldRates();
     
-    // Auto-refresh every 5 minutes
-    setInterval(fetchGoldRates, 5 * 60 * 1000);
+    // Auto-refresh every 10 minutes
+    setInterval(fetchGoldRates, 10 * 60 * 1000);
     
     // Manual refresh button
     document.getElementById('refresh-rates')?.addEventListener('click', fetchGoldRates);
