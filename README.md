@@ -149,3 +149,4 @@ Add your real images to `public/images/`:
 ---
 
 Built with ❤️ using Astro + Tailwind CSS + Motion One
+<- Disabled hover animations on Auto-deploy test Mon Mar  9 05:23:14 PM IST 2026 -->
