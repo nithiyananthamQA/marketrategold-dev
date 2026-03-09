@@ -1,0 +1,133 @@
+---
+// Branch Locations Section - No images, pure content
+const branches = [
+  {
+    name: "Coimbatore Branch",
+    address: "On the Annai Medicals Floor, 14 abc, Kattoor Rd, Dr. NRN Layout, Pappanaickenpalayam",
+    city: "Coimbatore",
+    pincode: "Tamil Nadu 641037",
+    phone: "+91 7200090326",
+    timing: "Mon-Sat: 9:00 AM - 6:00 PM",
+    icon: "🏢",
+    mapLink: "https://maps.google.com/?q=Coimbatore+Tamil+Nadu+641037"
+  },
+  {
+    name: "Tiruppur Branch",
+    address: "Dhanvantari Hospital 1st Floor, AMRG Nagar, Sirupuluvapatti",
+    city: "Tiruppur",
+    pincode: "Tamil Nadu 641403",
+    phone: "+91 7200090326",
+    timing: "Mon-Sat: 9:00 AM - 6:00 PM",
+    icon: "🏪",
+    mapLink: "https://maps.google.com/?q=Tiruppur+Tamil+Nadu+641403"
+  },
+  {
+    name: "Theni Branch",
+    address: "708, Vishnu Complex, Near Theni Anandham Textiles, Madurai Main Road",
+    city: "Theni",
+    pincode: "Tamil Nadu 625531",
+    phone: "+91 7200090326",
+    timing: "Mon-Sat: 9:00 AM - 6:00 PM",
+    icon: "🏬",
+    mapLink: "https://maps.google.com/?q=Theni+Tamil+Nadu+625531"
+  }
+];
+---
+
+<section id="branches" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-900 via-red-950 to-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12 sm:mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+        Our <span class="text-red-400">Branch Locations</span>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto">
+        Visit any of our branches for instant gold evaluation and payment
+      </p>
+    </div>
+
+    <!-- Branches Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+      {branches.map((branch, index) => (
+        <div 
+          class="branch-card bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 hover:bg-white/15 hover:border-red-400/50 transition-all duration-300 shadow-lg hover:shadow-2xl"
+          data-index={index}
+        >
+          <!-- Icon -->
+          <div class="text-5xl sm:text-6xl mb-4 sm:mb-6 text-center">{branch.icon}</div>
+          
+          <!-- Branch Name -->
+          <h3 class="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 text-center">{branch.name}</h3>
+          
+          <!-- Address -->
+          <div class="space-y-3 sm:space-y-4 text-gray-300">
+            <div class="flex items-start space-x-3">
+              <svg class="w-5 h-5 text-red-400 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <div>
+                <p class="text-sm leading-relaxed">{branch.address}</p>
+                <p class="text-sm font-semibold text-red-400 mt-1">{branch.city}, {branch.pincode}</p>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              <a href={`tel:${branch.phone}`} class="text-sm hover:text-red-400 transition-colors">{branch.phone}</a>
+            </div>
+            
+            <!-- Timing -->
+            <div class="flex items-center space-x-3">
+              <svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+              </svg>
+              <p class="text-sm">{branch.timing}</p>
+            </div>
+          </div>
+          
+          <!-- Get Directions Button -->
+          <div class="mt-6">
+            <a 
+              href={branch.mapLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full bg-red-600 hover:bg-red-700 text-white text-center px-4 py-3 rounded-lg font-semibold text-sm transition-colors duration-200"
+            >
+              Get Directions
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Additional Info Cards -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+        <div class="text-3xl sm:text-4xl mb-3">🚗</div>
+        <h4 class="text-base sm:text-lg font-bold text-white mb-2">Free Doorstep Service</h4>
+        <p class="text-xs sm:text-sm text-gray-400">We come to your location</p>
+      </div>
+      
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+        <div class="text-3xl sm:text-4xl mb-3">⚡</div>
+        <h4 class="text-base sm:text-lg font-bold text-white mb-2">Same Day Payment</h4>
+        <p class="text-xs sm:text-sm text-gray-400">Instant cash or transfer</p>
+      </div>
+      
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+        <div class="text-3xl sm:text-4xl mb-3">🔒</div>
+        <h4 class="text-base sm:text-lg font-bold text-white mb-2">100% Safe & Secure</h4>
+        <p class="text-xs sm:text-sm text-gray-400">Transparent evaluation</p>
+      </div>
+      
+      <div class="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+        <div class="text-3xl sm:text-4xl mb-3">💰</div>
+        <h4 class="text-base sm:text-lg font-bold text-white mb-2">Best Market Rates</h4>
+        <p class="text-xs sm:text-sm text-gray-400">Highest price guaranteed</p>
+      </div>
+    </div>
+  </div>
+</section>

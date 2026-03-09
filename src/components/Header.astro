@@ -1,0 +1,154 @@
+---
+// Header with navigation
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <a href="/" class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center">
+            <span class="text-white font-bold text-lg">MRG</span>
+          </div>
+          <div class="hidden sm:block">
+            <h1 class="text-xl font-bold text-gray-900">Market Rate Gold</h1>
+            <p class="text-xs text-gray-600">Trusted Since Years</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="/" class="text-gray-700 hover:text-red-600 font-medium transition">Home</a>
+        <a href="/#about" class="text-gray-700 hover:text-red-600 font-medium transition">About</a>
+        
+        <!-- Services Dropdown -->
+        <div class="relative group">
+          <button class="text-gray-700 hover:text-red-600 font-medium transition flex items-center">
+            Services
+            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <div class="absolute left-0 mt-2 w-72 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div class="py-2">
+              <a href="/gold-buyers-in-coimbatore" class="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition">
+                <div class="font-semibold">Gold Buyers in Coimbatore</div>
+                <div class="text-xs text-gray-500">Best rates for all gold types</div>
+              </a>
+              <a href="/cash-for-gold-in-coimbatore" class="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition">
+                <div class="font-semibold">Cash for Gold</div>
+                <div class="text-xs text-gray-500">Instant cash payment</div>
+              </a>
+              <a href="/old-gold-buyers-in-coimbatore" class="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition">
+                <div class="font-semibold">Old Gold Buyers</div>
+                <div class="text-xs text-gray-500">Vintage & antique gold</div>
+              </a>
+              <a href="/second-hand-old-gold-buyers-in-coimbatore" class="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition">
+                <div class="font-semibold">Second Hand Gold</div>
+                <div class="text-xs text-gray-500">Pre-owned jewelry</div>
+              </a>
+              <a href="/instant-cash-for-old-gold-in-coimbatore" class="block px-4 py-3 text-gray-700 hover:bg-red-50 hover:text-red-600 transition">
+                <div class="font-semibold">Instant Cash for Gold</div>
+                <div class="text-xs text-gray-500">10-minute service</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <a href="/#process" class="text-gray-700 hover:text-red-600 font-medium transition">Process</a>
+        <a href="/#testimonials" class="text-gray-700 hover:text-red-600 font-medium transition">Reviews</a>
+        <a href="/#contact" class="text-gray-700 hover:text-red-600 font-medium transition">Contact</a>
+      </nav>
+
+      <!-- CTA Buttons -->
+      <div class="flex items-center space-x-4">
+        <a href="tel:+917200090326" class="hidden sm:flex items-center space-x-2 text-red-600 hover:text-red-700 font-semibold">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+          </svg>
+          <span>Call Now</span>
+        </a>
+        <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-semibold transition shadow-lg hover:shadow-xl">
+          Get Quote
+        </a>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden text-gray-700" aria-label="Toggle menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200">
+    <nav class="flex flex-col space-y-2 px-4 py-6">
+      <a href="/" class="text-gray-700 hover:text-red-600 font-medium transition py-2">Home</a>
+      <a href="/#about" class="text-gray-700 hover:text-red-600 font-medium transition py-2">About</a>
+      
+      <!-- Mobile Services Submenu -->
+      <div>
+        <button id="mobile-services-btn" class="text-gray-700 hover:text-red-600 font-medium transition flex items-center justify-between w-full py-2">
+          <span>Services</span>
+          <svg class="w-4 h-4 transform transition-transform" id="mobile-services-icon" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+        <div id="mobile-services-menu" class="hidden pl-4 space-y-2 mt-2">
+          <a href="/gold-buyers-in-coimbatore" class="block text-gray-600 hover:text-red-600 text-sm py-2">Gold Buyers in Coimbatore</a>
+          <a href="/cash-for-gold-in-coimbatore" class="block text-gray-600 hover:text-red-600 text-sm py-2">Cash for Gold</a>
+          <a href="/old-gold-buyers-in-coimbatore" class="block text-gray-600 hover:text-red-600 text-sm py-2">Old Gold Buyers</a>
+          <a href="/second-hand-old-gold-buyers-in-coimbatore" class="block text-gray-600 hover:text-red-600 text-sm py-2">Second Hand Gold</a>
+          <a href="/instant-cash-for-old-gold-in-coimbatore" class="block text-gray-600 hover:text-red-600 text-sm py-2">Instant Cash for Gold</a>
+        </div>
+      </div>
+      
+      <a href="/#process" class="text-gray-700 hover:text-red-600 font-medium transition py-2">Process</a>
+      <a href="/#testimonials" class="text-gray-700 hover:text-red-600 font-medium transition py-2">Reviews</a>
+      <a href="/#contact" class="text-gray-700 hover:text-red-600 font-medium transition py-2">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Mobile services submenu toggle
+  const servicesBtn = document.getElementById('mobile-services-btn');
+  const servicesMenu = document.getElementById('mobile-services-menu');
+  const servicesIcon = document.getElementById('mobile-services-icon');
+  
+  servicesBtn?.addEventListener('click', () => {
+    servicesMenu?.classList.toggle('hidden');
+    servicesIcon?.classList.toggle('rotate-180');
+  });
+
+  // Close mobile menu when clicking a link
+  const mobileLinks = mobileMenu?.querySelectorAll('a');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href') || '');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>

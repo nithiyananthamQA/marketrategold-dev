@@ -1,0 +1,137 @@
+---
+const reasons = [
+  {
+    icon: `<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/></svg>`,
+    title: "Highest Market Price",
+    description: "We offer the best gold buying rate in Coimbatore based on current market standards."
+  },
+  {
+    icon: `<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/><path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/></svg>`,
+    title: "Transparent Evaluation",
+    description: "Your gold is tested in front of you with professional equipment and expert verification."
+  },
+  {
+    icon: `<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>`,
+    title: "Instant Cash Payment",
+    description: "Receive payment immediately after evaluation. No waiting, no delays."
+  },
+  {
+    icon: `<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>`,
+    title: "Doorstep Service",
+    description: "Our team visits your location for safe and convenient gold selling experience."
+  },
+  {
+    icon: `<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`,
+    title: "No Hidden Charges",
+    description: "You receive the exact value of your gold without any deductions or hidden fees."
+  },
+  {
+    icon: `<svg class="w-12 h-12" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`,
+    title: "Certified & Trusted",
+    description: "Years of trusted service with hundreds of satisfied customers across Tamil Nadu."
+  }
+];
+---
+
+<section id="why-choose-us" class="py-12 sm:py-16 lg:py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Why Choose <span class="text-red-600">MRG Gold Buyers?</span>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+        Experience the difference with Coimbatore's most trusted gold buyers
+      </p>
+    </div>
+
+    <!-- Reasons Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      {reasons.map((reason, index) => (
+        <div 
+          class="reason-card group relative bg-gradient-to-br from-white to-red-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-red-100"
+          data-index={index}
+        >
+          <div class="text-red-600 mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300" set:html={reason.icon}></div>
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{reason.title}</h3>
+          <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{reason.description}</p>
+          
+          <!-- Decorative element -->
+          <div class="absolute top-0 right-0 w-20 h-20 bg-red-200 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-2xl"></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="mt-12 sm:mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+      <div class="stat-card">
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">10+</div>
+        <div class="text-sm sm:text-base text-gray-600 font-medium">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">5000+</div>
+        <div class="text-sm sm:text-base text-gray-600 font-medium">Happy Customers</div>
+      </div>
+      <div class="stat-card">
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">₹50Cr+</div>
+        <div class="text-sm sm:text-base text-gray-600 font-medium">Gold Bought</div>
+      </div>
+      <div class="stat-card">
+        <div class="text-3xl sm:text-4xl lg:text-5xl font-bold text-red-600 mb-2">100%</div>
+        <div class="text-sm sm:text-base text-gray-600 font-medium">Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reason-card {
+      animation: fadeInScale 0.5s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .reason-card:nth-child(1) { animation-delay: 0.1s; }
+    .reason-card:nth-child(2) { animation-delay: 0.2s; }
+    .reason-card:nth-child(3) { animation-delay: 0.3s; }
+    .reason-card:nth-child(4) { animation-delay: 0.4s; }
+
+    .stat-card {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .stat-card:nth-child(1) { animation-delay: 0.2s; }
+    .stat-card:nth-child(2) { animation-delay: 0.3s; }
+    .stat-card:nth-child(3) { animation-delay: 0.4s; }
+    .stat-card:nth-child(4) { animation-delay: 0.5s; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .reason-card, .stat-card {
+      opacity: 1;
+    }
+  }
+</style>

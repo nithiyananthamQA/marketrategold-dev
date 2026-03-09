@@ -1,0 +1,98 @@
+---
+const services = [
+  {
+    icon: "💰",
+    title: "Instant Cash for Gold",
+    description: "Sell your gold jewellery and receive instant cash based on the latest market rate.",
+    features: ["Immediate payment", "Best market rates", "Safe transaction"]
+  },
+  {
+    icon: "🏠",
+    title: "Doorstep Gold Buyers",
+    description: "Our experts visit your home and evaluate your gold safely and transparently.",
+    features: ["Home service", "Safe & secure", "No travel needed"]
+  },
+  {
+    icon: "🔓",
+    title: "Release Pledged Gold",
+    description: "We help customers release pledged gold and provide higher payout options.",
+    features: ["Higher payouts", "Quick process", "Confidential service"]
+  },
+  {
+    icon: "📋",
+    title: "Free Gold Valuation",
+    description: "Get a free gold quotation without any obligation to sell.",
+    features: ["No obligation", "Expert evaluation", "Transparent pricing"]
+  }
+];
+---
+
+<section id="services" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-gray-50 to-red-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Our <span class="text-red-600">Services</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Comprehensive gold buying services designed for your convenience and maximum value
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+      {services.map((service, index) => (
+        <div 
+          class="service-card bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+          data-index={index}
+        >
+          <div class="text-4xl sm:text-5xl mb-4 sm:mb-6">{service.icon}</div>
+          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{service.title}</h3>
+          <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">{service.description}</p>
+          
+          <ul class="space-y-2">
+            {service.features.map(feature => (
+              <li class="flex items-center space-x-2 text-gray-700">
+                <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .service-card {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .service-card:nth-child(1) { animation-delay: 0.1s; }
+    .service-card:nth-child(2) { animation-delay: 0.2s; }
+    .service-card:nth-child(3) { animation-delay: 0.3s; }
+    .service-card:nth-child(4) { animation-delay: 0.4s; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .service-card {
+      opacity: 1;
+    }
+  }
+</style>

@@ -1,0 +1,129 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Contact Our Team",
+    description: "Call or WhatsApp us for gold valuation. Our experts will schedule a convenient time for you.",
+    icon: `<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>`
+  },
+  {
+    number: "02",
+    title: "Gold Testing & Weighing",
+    description: "Your gold is tested with professional equipment and weighed transparently in front of you.",
+    icon: `<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg>`
+  },
+  {
+    number: "03",
+    title: "Market Price Calculation",
+    description: "We calculate the current market price based on gold purity, weight, and latest rates.",
+    icon: `<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/></svg>`
+  },
+  {
+    number: "04",
+    title: "Receive Instant Payment",
+    description: "Get paid immediately via cash, bank transfer, or UPI once you approve the valuation.",
+    icon: `<svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`
+  }
+];
+---
+
+<section id="process" class="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-red-50 to-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        Gold Selling <span class="text-red-600">Process</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+        Simple and transparent process to convert your gold into instant cash
+      </p>
+    </div>
+
+    <!-- Process Steps -->
+    <div class="relative">
+      <!-- Connection Line (hidden on mobile) -->
+      <div class="hidden lg:block absolute top-20 left-0 right-0 h-1 bg-gradient-to-r from-red-200 via-red-500 to-red-700 z-0"></div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
+        {steps.map((step, index) => (
+          <div 
+            class="process-step group"
+            data-index={index}
+          >
+            <!-- Card with hover effect -->
+            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg hover:shadow-2xl transition-all duration-300 h-full border-2 border-transparent hover:border-red-500">
+              <!-- Step Number Circle -->
+              <div class="relative inline-block mb-6">
+                <div class="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
+                  <span class="text-2xl sm:text-3xl font-bold text-white">{step.number}</span>
+                </div>
+                <!-- Icon Badge -->
+                <div class="absolute -bottom-2 -right-2 w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-full flex items-center justify-center shadow-lg text-red-600 border-4 border-red-50 group-hover:rotate-12 transition-transform duration-300">
+                  <div class="w-6 h-6 sm:w-8 sm:h-8" set:html={step.icon}></div>
+                </div>
+              </div>
+
+              <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">{step.title}</h3>
+              <p class="text-sm sm:text-base text-gray-600 leading-relaxed">{step.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-16">
+      <p class="text-xl text-gray-700 mb-6">Ready to sell your gold?</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href="#contact" 
+          class="inline-block bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          Start Process Now
+        </a>
+        <a 
+          href="https://wa.me/917200090326" 
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          <span>WhatsApp Us</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .process-step {
+      animation: fadeInUp 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .process-step:nth-child(1) { animation-delay: 0.15s; }
+    .process-step:nth-child(2) { animation-delay: 0.30s; }
+    .process-step:nth-child(3) { animation-delay: 0.45s; }
+    .process-step:nth-child(4) { animation-delay: 0.60s; }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .process-step {
+      opacity: 1;
+    }
+  }
+</style>
